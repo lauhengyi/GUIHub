@@ -21,6 +21,14 @@ function SiteNavMenu({ isAnonymous, close, dropdown, overlay }) {
   const authDelegated = settings.enable_oauth2_client
 
   const topNav = []
+  topNav.push({
+    title: pgettext("site nav", "Volunteer"),
+    url: baseUrl + "volunteer/",
+  })
+  topNav.push({
+    title: pgettext("site nav", "Dashboard"),
+    url: baseUrl + "dashboard/",
+  })
   if (misago.get("THREADS_ON_INDEX")) {
     topNav.push({ title: pgettext("site nav", "Threads"), url: baseUrl })
     topNav.push({

@@ -6641,6 +6641,14 @@ function SiteNavMenu(_ref) {
   var users = misago.get("usersLists");
   var authDelegated = settings.enable_oauth2_client;
   var topNav = [];
+  topNav.push({
+    title: pgettext("site nav", "Volunteer"),
+    url: baseUrl + "volunteer/"
+  });
+  topNav.push({
+    title: pgettext("site nav", "Dashboard"),
+    url: baseUrl + "dashboard/"
+  });
   if (misago.get("THREADS_ON_INDEX")) {
     topNav.push({
       title: pgettext("site nav", "Threads"),
